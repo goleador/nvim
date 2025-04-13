@@ -1,0 +1,34 @@
+# Swap files
+*.swp
+*.swo
+
+# Undo files
+*.un~
+
+# Backup files
+*.bak
+*.tmp
+
+# Session files (if you use them)
+Session.vim
+
+# Lazy.nvim plugin lockfile
+lazy-lock.json
+
+# Optional: LSP logs or cache
+.lsp/
+.luasnip/
+
+# Optional: plugin compiled cache
+plugin/packer_compiled.lua
+
+# Node modules or Deno cache (if experimenting with JavaScript stuff)
+node_modules/
+deno_dir/
+
+# Secret env files (for LLMs or Copilot)
+.env
+.env.*
+
+# Mac-specific metadata
+.DS_Store
