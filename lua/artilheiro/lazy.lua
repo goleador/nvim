@@ -112,7 +112,13 @@ require("lazy").setup({
       })
     end,
   },
+
   { "christoomey/vim-tmux-navigator" },
 
-
+  {
+    'lewis6991/gitsigns.nvim',
+    config = function()
+      require('gitsigns').setup()
+    end,
+  }
 })
