@@ -120,5 +120,23 @@ require("lazy").setup({
     config = function()
       require('gitsigns').setup()
     end,
+  },
+
+  {
+    "nvim-tree/nvim-tree.lua",
+    dependencies = {
+      "nvim-tree/nvim-web-devicons", -- optional, for file icons
+    },
+    config = function()
+      require("nvim-tree").setup()
+    end
+  },
+
+  {
+    "folke/which-key.nvim",
+    event = "VeryLazy",
+    config = function()
+      require("which-key").setup {}
+    end
   }
 })

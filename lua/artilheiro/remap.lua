@@ -22,3 +22,6 @@ keymap.set("n", "<leader>to", ":tabonly<CR>", { desc = "Close other tabs" }) -- 
 keymap.set("n", "<leader>tn", ":tabnext<CR>", { desc = "Next tab" })         -- next tab
 keymap.set("n", "<leader>tp", ":tabprevious<CR>", { desc = "Previous tab" }) -- prev tab
 keymap.set("n", "<leader>tm", ":tabmove<CR>", { desc = "Move tab" })         -- move tab
+
+-- Navigation 
+vim.keymap.set("n", "<leader>e", ":NvimTreeToggle<CR>", { desc = "Toggle file explorer" })
