@@ -16,12 +16,10 @@ keymap.set("n", "<leader>sx", ":close<CR>", { desc = "Close current split" })
 
 
 -- Tabs
-keymap.set("n", "<leader>tt", ":tabnew<CR>", { desc = "New tab" })           -- new tab
-keymap.set("n", "<leader>tc", ":tabclose<CR>", { desc = "Close tab" })       -- close tab
-keymap.set("n", "<leader>to", ":tabonly<CR>", { desc = "Close other tabs" }) -- close others
-keymap.set("n", "<leader>tn", ":tabnext<CR>", { desc = "Next tab" })         -- next tab
-keymap.set("n", "<leader>tp", ":tabprevious<CR>", { desc = "Previous tab" }) -- prev tab
-keymap.set("n", "<leader>tm", ":tabmove<CR>", { desc = "Move tab" })         -- move tab
+vim.keymap.set('n', '<Tab>', ':bnext<CR>')
+vim.keymap.set('n', '<S-Tab>', ':bprevious<CR>')
+vim.keymap.set('n', '<leader>x', ':bdelete<CR>')  -- close buffer
+
 
 -- Navigation 
 vim.keymap.set("n", "<leader>e", ":NvimTreeToggle<CR>", { desc = "Toggle file explorer" })

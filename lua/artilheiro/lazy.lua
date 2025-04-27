@@ -124,11 +124,28 @@ require("lazy").setup({
 
   {
     "nvim-tree/nvim-tree.lua",
-    dependencies = {
-      "nvim-tree/nvim-web-devicons", -- optional, for file icons
-    },
+    dependencies = { "nvim-tree/nvim-web-devicons" },
     config = function()
-      require("nvim-tree").setup()
+      require("nvim-tree").setup({
+        view = {
+          width = 30,
+          side = "left",
+        },
+        actions = {
+          open_file = {
+            quit_on_open = false, -- keep the tree open or not
+            resize_window = true,
+          },
+        },
+      })
+    end
+  },
+  {
+    "akinsho/bufferline.nvim",
+    version = "*",
+    dependencies = "nvim-tree/nvim-web-devicons",
+    config = function()
+      require("bufferline").setup{}
     end
   },
 

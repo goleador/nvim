@@ -1,1 +1,1 @@
-prin("print from rodrigo")
+print("Print from artilheiro init")

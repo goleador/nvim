@@ -25,9 +25,6 @@ vim.opt.rtp:prepend(lazypath)
 
 require("artilheiro.lazy")
 
--- Load plugins (e.g. rose-pine, telescope)
---require("artilheiro.packer")
-
 
 -- BuildiOS
 vim.api.nvim_create_user_command("BuildiOS", function()
