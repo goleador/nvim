@@ -20,9 +20,34 @@ require("lazy").setup({
   {
     "nvim-telescope/telescope.nvim",
     tag = "0.1.8",
-    dependencies = { "nvim-lua/plenary.nvim" },
+    dependencies = {
+      "nvim-lua/plenary.nvim",
+      { "nvim-telescope/telescope-fzf-native.nvim", build = "make", lazy = true },
+    },
     config = function()
-      require("telescope").setup()
+      require("telescope").setup({
+        defaults = {
+          file_ignore_patterns = { "node_modules", ".git/", "dist/", "build/", "venv/", ".venv/" },
+          layout_config = {
+            prompt_position = "top",
+          },
+          sorting_strategy = "ascending",
+          mappings = {
+            i = {
+              ["<C-j>"] = "move_selection_next",
+              ["<C-k>"] = "move_selection_previous",
+            },
+          },
+        },
+        pickers = {
+          find_files = {
+            hidden = true, -- include dotfiles
+          },
+        },
+      })
+
+      -- Try loading fzf extension (won't error if missing)
+      pcall(require("telescope").load_extension, "fzf")
     end,
   },
 
